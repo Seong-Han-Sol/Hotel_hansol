@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+/* home.jsp */
+/*https://pixabay.com/images/id-2366301/ 홈화면 이미지 출처 주소*/
+
+body{
+	background-image: url("../img/moon1.jpg");
+	background-repeat: no-repeat;
+}
+
+h1{
+	/*jsp파일에 임포트한 글꼴 사용시 font-family (아래 ) 글꼴 임포트 하는 홈페이지에 쓰여있음*/
+	font-family: 'Lobster', cursive;
+	font-size: 180px;
+	text-align: right;
+	color: white;
+}
+
+.homeMain{
+	text-align: right;
+	margin-right: 250px;
+	margin-top: 120px;
+}
+.loginMain{
+	margin-right: 80px; 
+}
+.joinMain{
+	margin-right: 80px;
+}
+h3{
+	font-family: 'Single Day', cursive;
+	margin-bottom: 5px;
+	font-size: 45px;
+	color: silver;
+}
+a{
+	font-family: 'Single Day', cursive;
+	font-size: 90px;
+	color: black;
+	text-decoration:none;
+	margin-top: 0;
+	color: rgb(250,220,255);
+}

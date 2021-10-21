@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+/*이미지 픽사베이 출처 : https://pixabay.com/images/id-347319/ */
+
+body{
+	background-image: url("../img/hotel1.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	font-family: 'Single Day', cursive;
+
+}
+
+.div_first{
+	float: left;
+	width: 50%;
+	text-align: center;
+}
+.div_second{
+	float: left;
+	width: 50%;
+	text-align: center;
+	margin-left: -170px;
+}
+
+a{
+	font-size: 40px;
+	text-decoration:none;
+	color: white;
+}
+p{
+	font-size: 20px;
+	text-align: center;
+	color: white;
+}
+.div_first p {
+	font-size: 40px;
+	margin-bottom: 5px;
+}
+.p1{
+	margin-left: -180px;
+}
+/*a태그 뒤에 | 붙이는 CSS */
+.menu a::after{
+    content: "|";
+    display: inline-block;
+    padding: 0 5px;
+    color: #444;
+    font-size: 20px;
+    position: relative;
+    top: -2px;
+    padding: 10px;
+}
+/*href 속성이 있고 클릭하지 않은 a 태그의 색 */
+a:link {
+	color: #ff9dce; 
+}
+/* href 속성이 있고 클릭한 a 태그의 색 */
+a:visited {
+	color: #d2acf4;
+}
+
+.menu > h1 {
+	font-family: 'Single Day', cursive;
+	text-align: center;
+	font-size: 50px;
+}
+
+select{
+	font-family: 'Single Day', cursive;
+	background-color: rgb(214,255,255,0.6);
+	color: #fa508b;
+	border: 1px solid white;
+	font-weight: 900;
+
+}
+.div_first select{
+	margin-top: 5px;
+	width: 500px;
+	font-size: 28px;
+}
+.div_second select{
+	width: 250px;
+	font-size: 20px;
+}
+
+[type=text],[type=number]{
+	font-family: 'Single Day', cursive;
+	font-size: 20px;
+	background-color: rgb(214,255,255,0.6);
+	border: 1px solid white;
+}
+
+#btnAdd,#btnDel{
+	font-family: 'Single Day', cursive;
+    margin-top: 10px;
+    font-size: 18px;
+    margin-right: 30px;
+    width: 60px;
+    height: 30px;
+}
+#btnEmpty{
+	font-family: 'Single Day', cursive;
+    font-size: 18px;
+    color: white;
+    background-color: rgb(255, 102, 153);
+    width: 60px;
+    height: 30px;
+    border: 2px solid rgb(204, 000, 051);
+}

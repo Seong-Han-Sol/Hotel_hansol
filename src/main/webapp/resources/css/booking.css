@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+body{
+	background-image: url("../img/room.jpg");
+	background-repeat: no-repeat;
+	font-family: 'Single Day', cursive;
+	background-size: 100%;
+}
+
+.all{
+	width: 100%;
+}
+p {
+	font-size: 22px;
+	color: white;
+}
+h2{
+	font-size: 30px;
+}
+a{
+	font-size: 40px;
+	text-decoration:none;
+	color: white;
+}
+/*a태그 뒤에 | 붙이는 CSS */
+.menu a::after{
+    content: "|";
+    display: inline-block;
+    padding: 0 5px;
+    color: #444;
+    font-size: 20px;
+    position: relative;
+    top: -2px;
+    padding: 10px;
+}
+/*href 속성이 있고 클릭하지 않은 a 태그의 색 */
+a:link {
+	color: #ff9dce; 
+}
+/* href 속성이 있고 클릭한 a 태그의 색 */
+a:visited {
+	color: #d2acf4;
+}
+.menu > h1 {
+	font-family: 'Single Day', cursive;
+	text-align: center;
+	font-size: 50px;
+}
+.first{
+	width: 32%;
+	float: left;
+	text-align: center;
+	border: 1px solid white;
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-top: 3%;
+}
+.first #roomCheck {
+	font-family: 'Single Day', cursive;
+	width: 500px;
+	font-size: 28px;
+	background-color: rgb(214,255,255,0.6);
+	color: #fa508b;
+	border: 1px solid white;
+	font-weight: 900;
+	margin-bottom: 7%;
+}
+.inquiry select{
+	font-family: 'Single Day', cursive;
+	border: 1px solid white;
+	font-size: 20px;
+	background-color: rgb(214,255,255,0.6);
+}
+.second{
+	width: 24%;
+	float: left;
+	text-align: center;
+	border: 1px solid white;
+	margin-right: 1%;
+	margin-top: 3%;
+}
+.second p {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.third{
+	width: 39%;
+	float: left;
+	text-align: center;
+	border: 1px solid white;
+	margin-top: 3%;
+}
+.third p {
+	text-align: center;
+}
+.third select{
+	font-family: 'Single Day', cursive;
+	width: 720px;
+	font-size: 21px;
+	background-color: rgb(214,255,255,0.6);
+	color: #fa508b;
+	border: 1px solid white;
+	font-weight: 900;
+}
+[type=date],[type=text],[type=number]{
+	font-family: 'Single Day', cursive;
+	font-size: 20px;
+	background-color: rgb(214,255,255,0.6);
+	border: 1px solid white;
+}
+[type=button]{
+	font-family: 'Single Day', cursive;
+    margin-top: 10px;
+    font-size: 18px;
+    background-color: lightblue;
+    margin-right: 30px;
+    width: 60px;
+    height: 30px;
+    color: white;
+    margin-bottom: 4%;
+}

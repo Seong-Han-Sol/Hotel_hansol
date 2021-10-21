@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hotel.app.iMember">
+<!-- 회원가입 (newBie) insert문 -->
+	<insert id="signUp">
+		insert into member(name,loginid,passcode)
+		values(#{param1},#{param2},#{param3})
+	</insert>
+<!-- 회원가입된 =DB에 등록된 ID만 로그인 -->
+	<select id="checkUser" resultType="int">
+		select count(*) from member where loginid=#{param1} and passcode=#{param2}
+	</select>
+</mapper>

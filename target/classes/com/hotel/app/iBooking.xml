@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hotel.app.iBooking">
+<!-- 예약된 객실을 제외한 예약 가능 객실을 보여주는 쿼리 -->
+	<select id="canBookingRoom" resultType="com.hotel.app.Roominfo">
+		select a.roomcode,a.name roomname,b.name typename, a.howmany, a.howmuch
+		from hotelroom a, hotelroomtype b
+		where roomcode in(select roomcode from hotelroom minus select distinct roomcode from bookingroom where <![CDATA[checkout > #{param1} and checkin < #{param2}]]>)
+		and a.type=b.typecode	
+	</select>
+	<!-- 예약된 객실 조회 -->
+	<select id="bookingCheck" resultType="com.hotel.app.BookInfo">
+		select a.bookcode,a.roomcode,b.name roomname,c.name typename,a.howmany,b.howmany max_howmany,a.checkin,a.checkout,a.total,a.bname,a.mobile
+		from bookingroom a, hotelroom b, hotelroomtype c
+		where <![CDATA[a.checkout>#{param1} and a.checkin<#{param2}]]> and a.roomcode=b.roomcode and b.type=c.typecode
+	</select>
+	<insert id="addBooking">
+		insert into bookingroom values(b_room.nextval,#{param1},#{param2},#{param3},#{param4},#{param5},#{param6},#{param7})
+	</insert>
+	<update id="updateBooking">
+		update bookingroom set roomcode=#{param2},howmany=#{param3},checkin=#{param4},checkout=#{param5},total=#{param6},bname=#{param7},mobile=#{param8}
+		where bookcode=#{param1}
+	</update>
+	<delete id="deleteBooking">
+		delete from bookingroom where bookcode=#{param1}
+	</delete>
+</mapper>

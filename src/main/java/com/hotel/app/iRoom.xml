@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.hotel.app.iRoom">
+<!-- namespace= "인터페이스의 경로명+이름" -->
+
+	<!-- 등록된 객실 리스트 DB에서 가져오기 -->
+	<select id="showRoomList" resultType="com.hotel.app.Roominfo">
+		select a.roomcode, a.name roomname, b.name typename, a.howmany, a.howmuch
+		from hotelroom a, hotelroomtype b
+		where a.type=b.typecode order by roomname
+	</select>
+	<!-- 등록된 객실타입 DB에서 가져오기 -->
+	<select id="showRoomType" resultType="com.hotel.app.RoomType">
+		select typecode, name from hotelroomtype order by typecode
+	</select>
+	<!-- DB에 적힌 스키마랑 똑같이 요소를 적어줘야 insert가 된다. -->
+	<insert id="addRoom">
+		insert into hotelroom(roomcode,name,type,howmany,howmuch)
+		values(h_room.nextval,#{param1},#{param2},#{param3},#{param4})
+	</insert>
+	<update id="updateRoom">
+	update hotelroom set name=#{param2},type=#{param3},howmany=#{param4},howmuch=#{param5}
+	where roomcode=#{param1}
+	</update>
+	<delete id="deleteRoom">
+		delete from hotelroom where roomcode=#{param1}
+	</delete>
+</mapper>

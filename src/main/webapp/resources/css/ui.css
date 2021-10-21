@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+/*이미지 픽사베이 출처 > https://pixabay.com/images/id-3976622/*/
+/* 공통 CSS */
+
+body{
+	background-image: url("../img/room.jpg");
+	background-repeat: no-repeat;
+}
+
+.all{
+    float: left;
+    padding-top: 20px;
+    width: 100%;
+    height: 300px;
+    text-align: center;
+}
+
+.div_third{
+    width: 30%;
+    float: right;
+    box-sizing: border-box;
+    text-align: right;
+}
+.btn1,.btn2{
+    margin-top: 10px;
+    font-size: 16px;
+    background-color: lightblue;
+    margin-right: 30px;
+    width: 60px;
+    height: 30px;
+}
+#btn3{
+    font-size: 16px;
+    color: white;
+    background-color: rgb(255, 102, 153);
+    width: 60px;
+    height: 30px;
+    border: 2px solid rgb(204, 000, 051);
+}
+
+room.html에 쓸 CSS
+body{
+    background-color: ivory;
+}
+header{
+    text-align: center;
+}
+.p1{
+    margin-top: 20px;
+}
+#list_room{
+    font-size: 18px;
+    width: 70%;
+    appearance: none;
+}
+#roomSize{
+    font-size: 15px;
+    width: 30%;
+}
+.div_first{
+    width: 52%;
+    float: left;
+    box-sizing: border-box;
+    text-align: right;
+    padding-right: 100px;
+}
+.div_second{
+    width: 48%;
+    float: right;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+a:link{
+    color: aliceblue;
+}
+a:visited { color: #444; }
+a { 
+    text-decoration: none;
+    padding-right: 0px;
+}
+.menu h2 a::after{
+    content: "|";
+    display: inline-block;
+    padding: 0 5px;
+    color: #444;
+    font-size: 10px;
+    position: relative;
+    top: -2px;
+    padding: 10px;
+}
+
+reservation.html 쓸 CSS
+
+.first{
+    width: 30%;
+    float: left;
+    box-sizing: border-box;
+    text-align: left;
+    padding-right: 20px;
+    line-height: 250%;
+
+}
+.second{
+    width: 30%;
+    float: left;
+    box-sizing: border-box;
+    text-align: left;
+    padding-left: 5%;
+    margin: 0;
+    line-height: 200%;
+}
+.third{
+    width: 40%;
+    float: left;
+    box-sizing: border-box;
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
+    line-height: 250%;
+}
+.inquiry{
+    border: 1px solid;
+    width: 100%;
+    height: 80px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    
+}
+#room{
+    width: 45%;
+    height: 22px;
+    text-align: left;
+}
+.table1, .table2{
+    border: 1px solid #444444;
+    text-align: center;
+    height: 100px;
+    width: 100%;
+
+}
+th{
+    border-bottom: 1px solid #444444;
+}
